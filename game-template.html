@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- ============================================================
+  PIXELFALCONVR — GAME PAGE TEMPLATE
+  How to use: copy this file to <your-slug>.html, then replace
+  every ALL-CAPS placeholder:
+    GAME_TITLE        e.g. 8 Seconds
+    GENRE_PHRASE      e.g. VR bull riding game
+    PRICE             e.g. $12.99
+    STORE_URL         the real Meta Horizon Store URL
+    META_DESC         150-160 char search description
+    INTRO_PARAGRAPH   2-3 sentences, genre keywords in first line
+    FEATURE_1..4      the 4 headline features
+    FAQ_Q/A x6-8      questions phrased how users search
+  Then: add the game to games-data.js + sitemap.xml (see README).
+  REQUIRED: keep the PixelFalconVR About footer text unchanged.
+============================================================= -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GAME_TITLE – GENRE_PHRASE for Meta Quest | PixelFalconVR</title>
+<meta name="description" content="META_DESC">
+<link rel="stylesheet" href="styles.css">
+<link rel="canonical" href="https://kashi45248-prog.github.io/PixelFalconVR/GAME_SLUG.html">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoGame","name":"GAME_TITLE","genre":["GENRE_PHRASE"],"gamePlatform":["Meta Quest 2","Meta Quest 3"],"operatingSystem":"Meta Horizon OS","applicationCategory":"Game","author":{"@type":"Organization","name":"PixelFalconVR","email":"pixelfalconvr@gmail.com"},"offers":{"@type":"Offer","price":"PRICE_NUMBER","priceCurrency":"USD","availability":"https://schema.org/InStock"}}</script>
+<!-- TIP: generate FAQPage schema from your FAQs with the same script used for neon-katana.html -->
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="index.html">PIXEL<span>FALCON</span>VR</a>
+<nav><a href="index.html">Games</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a></nav>
+</div></header>
+<div class="wrap">
+<p class="crumbs"><a href="index.html">Games</a> / GAME_TITLE</p>
+<div class="game-hero">
+<div>
+<h1>GAME_TITLE — GENRE_PHRASE for Meta Quest</h1>
+<p class="tag" style="color:var(--muted);font-size:1.1rem">INTRO_PARAGRAPH</p>
+<ul class="feats">
+<li><b>FEATURE_1</b></li>
+<li><b>FEATURE_2</b></li>
+<li><b>FEATURE_3</b></li>
+<li><b>FEATURE_4</b></li>
+</ul>
+</div>
+<div class="buybox">
+<div class="price">PRICE <span style="font-size:.9rem;color:var(--muted)">USD</span></div>
+<p class="note">One-time purchase · Meta Quest 2 &amp; Quest 3</p>
+<a class="btn" href="STORE_URL">Get it on Meta Horizon Store</a>
+</div>
+</div>
+<div class="prose">
+<h2>SECTION_HEADING_WITH_KEYWORDS</h2>
+<p>SECTION_PARAGRAPH</p>
+<div class="faq">
+<details><summary>FAQ_QUESTION_1</summary><p>FAQ_ANSWER_1</p></details>
+<!-- add 6-8 FAQs, phrased how users search -->
+</div>
+<div class="cta-band">
+<h2>CTA_HEADING</h2>
+<a class="btn" href="STORE_URL">Get GAME_TITLE</a>
+</div>
+</div>
+</div>
+<footer class="site"><div class="wrap">
+<span>© 2026 PixelFalconVR. All rights reserved.</span>
+<span><a href="sitemap.xml">Sitemap</a> · Contact us: <a href="mailto:pixelfalconvr@gmail.com">pixelfalconvr@gmail.com</a></span>
+</div></footer>
+</body>
+</html>
