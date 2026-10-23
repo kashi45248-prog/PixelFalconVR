@@ -16,7 +16,6 @@ const GAMES = [
     genre: "VR rhythm game",                // shown on the card
     tagline: "Slice neon blocks to the beat with dual glowing katanas.",
     status: "live",                         // "live" | "coming-soon"
-    price: "$11.99",
     storeUrl: "https://www.meta.com/experiences/neon-katana/1255286791011725/",
     image: "images/neon-katana.jpg",        // TODO: drop the screenshot in images/
     keywords: "vr rhythm game, games like beat saber, katana vr game, vr slicing game"
@@ -34,8 +33,8 @@ const GAMES = [
       : '<span class="badge soon">COMING SOON</span>';
     var art = '<div class="art"><img src="' + g.image + '" alt="' + g.title + ' — ' + g.genre + '" loading="lazy" onerror="this.parentNode.innerHTML=\'' + g.title + '\'"></div>';
     var cta = g.status === "live"
-      ? '<span class="price">' + g.price + '</span><a class="btn" style="padding:9px 20px;font-size:.9rem" href="' + g.slug + '.html">View →</a>'
-      : '<span class="price" style="color:var(--muted)">TBA</span><a class="btn ghost" style="padding:9px 20px;font-size:.9rem" href="' + g.slug + '.html">Preview →</a>';
+      ? '<a class="btn" style="padding:9px 20px;font-size:.9rem" href="' + g.slug + '.html">View →</a>'
+      : '<a class="btn ghost" style="padding:9px 20px;font-size:.9rem" href="' + g.slug + '.html">Preview →</a>';
     return '<div class="card">' + art + '<div class="body">' +
       '<div>' + badge + '</div>' +
       '<h3>' + g.title + '</h3><div class="genre">' + g.genre + '</div>' +
