@@ -17,7 +17,7 @@ const GAMES = [
     tagline: "Slice neon blocks to the beat with dual glowing katanas.",
     status: "live",                         // "live" | "coming-soon"
     storeUrl: "https://www.meta.com/experiences/neon-katana/1255286791011725/",
-    image: "images/neon-katana.jpg",        // TODO: drop the screenshot in images/
+    image: "images/neon-katana-logo.png",
     keywords: "vr rhythm game, games like beat saber, katana vr game, vr slicing game"
   },
   // --- ADD NEW GAMES HERE (copy the block above) ---
