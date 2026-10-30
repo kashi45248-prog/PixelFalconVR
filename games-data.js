@@ -28,7 +28,7 @@ const GAMES = [
     status: "coming-soon",
     storeUrl: "",                           // no store URL until live
     image: "images/spirit-sweep-icon.png",
-    keywords: "vr ghost hunting game, vr horror game, ghost cleaning vr, meta quest horror"
+    keywords: "vr ghost hunting game, vr horror game, ghost cleaning vr, meta quest horror, games like phasmophobia, ghostbusters vr, exorcist legion vr, best vr horror games quest"
   },
   // --- ADD NEW GAMES HERE (copy the block above) ---
 ];
