@@ -20,6 +20,16 @@ const GAMES = [
     image: "images/neon-katana-logo.png",
     keywords: "vr rhythm game, games like beat saber, katana vr game, vr slicing game"
   },
+  {
+    slug: "spirit-sweep",                   // = spirit-sweep.html
+    title: "Spirit Sweep VR",
+    genre: "VR ghost-hunting game",
+    tagline: "Enter the haunting. Wield the relic. Purge the estate.",
+    status: "coming-soon",
+    storeUrl: "",                           // no store URL until live
+    image: "images/spirit-sweep.png",
+    keywords: "vr ghost hunting game, vr horror game, ghost cleaning vr, meta quest horror"
+  },
   // --- ADD NEW GAMES HERE (copy the block above) ---
 ];
 
