@@ -27,7 +27,7 @@ const GAMES = [
     tagline: "Enter the haunting. Wield the relic. Purge the estate.",
     status: "coming-soon",
     storeUrl: "",                           // no store URL until live
-    image: "images/spirit-sweep.png",
+    image: "images/spirit-sweep-icon.png",
     keywords: "vr ghost hunting game, vr horror game, ghost cleaning vr, meta quest horror"
   },
   // --- ADD NEW GAMES HERE (copy the block above) ---
