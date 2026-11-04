@@ -25,8 +25,8 @@ const GAMES = [
     title: "Spirit Sweep VR",
     genre: "VR ghost-hunting game",
     tagline: "Enter the haunting. Wield the relic. Purge the estate.",
-    status: "coming-soon",
-    storeUrl: "",                           // no store URL until live
+    status: "live",
+    storeUrl: "https://www.meta.com/experiences/app/1299649689908768/",
     image: "images/spirit-sweep-icon.png",
     keywords: "vr ghost hunting game, vr horror game, ghost cleaning vr, meta quest horror, games like phasmophobia, ghostbusters vr, exorcist legion vr, best vr horror games quest"
   },
