@@ -28,7 +28,12 @@
 <section class="block" id="games">
 <h2 class="sec">Our games</h2>
 <p class="lead">Live now and coming soon. Every title is an original PixelFalconVR creation.</p>
-<div class="grid" id="games-grid"><!-- rendered from games-data.js --></div>
+<div class="carousel" id="games-carousel">
+<button class="carousel-arrow prev" id="games-prev" type="button" aria-label="Previous games">‹</button>
+<div class="carousel-track" id="games-grid" role="region" aria-label="Featured games"><!-- rendered from games-data.js --></div>
+<button class="carousel-arrow next" id="games-next" type="button" aria-label="Next games">›</button>
+</div>
+<div class="carousel-dots" id="games-dots"></div>
 </section>
 
 <section class="block" id="vr-games">

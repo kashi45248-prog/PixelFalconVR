@@ -69,3 +69,23 @@ footer.site .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:
 .feats{list-style:none;padding:0;margin:18px 0}
 .feats li{padding:8px 0 8px 30px;position:relative;color:#cfcfe0}
 .feats li::before{content:"⚡";position:absolute;left:0}
+
+/* Featured-games carousel (homepage #games section only) */
+.carousel{position:relative}
+.carousel-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:4px 2px}
+.carousel-track::-webkit-scrollbar{display:none}
+.carousel-track .card{flex:0 0 100%;scroll-snap-align:start}
+@media(min-width:801px){
+  .carousel-track .card{flex-basis:calc(50% - 10px)}
+}
+.carousel-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:rgba(18,18,31,.92);color:var(--text);font-size:1.5rem;line-height:1;cursor:pointer}
+.carousel-arrow.prev{left:-8px}
+.carousel-arrow.next{right:-8px}
+.carousel-arrow:hover{border-color:var(--neon);color:var(--neon)}
+.carousel-arrow:disabled{opacity:.35;cursor:default}
+.carousel-arrow:disabled:hover{border-color:var(--line);color:var(--text)}
+.carousel.single-page .carousel-arrow{display:none}
+.carousel-dots{display:flex;justify-content:center;gap:8px;margin-top:16px}
+.carousel-dots.hidden{display:none}
+.carousel-dots button{width:10px;height:10px;padding:0;border-radius:50%;border:1px solid var(--line);background:transparent;cursor:pointer}
+.carousel-dots button.active{background:var(--neon);border-color:var(--neon)}

@@ -7,7 +7,7 @@
    2. Copy game-template.html to <slug>.html (e.g. "bull-riding.html")
       and replace the ALL-CAPS placeholders.
    3. Add the new page URL to sitemap.xml (copy a <url> block).
-   The homepage grid below renders automatically from this file.
+   The homepage carousel below renders automatically from this file.
    ============================================================ */
 const GAMES = [
   {
@@ -33,7 +33,7 @@ const GAMES = [
   // --- ADD NEW GAMES HERE (copy the block above) ---
 ];
 
-/* Renders the homepage games grid. No need to edit. */
+/* Renders the homepage games carousel. No need to edit. */
 (function renderGames(){
   var grid = document.getElementById("games-grid");
   if (!grid || typeof GAMES === "undefined") return;
@@ -51,4 +51,62 @@ const GAMES = [
       '<p>' + g.tagline + '</p>' +
       '<div class="row">' + cta + '</div></div></div>';
   }).join("");
+  initCarousel();
 })();
+
+/* Carousel controls for the homepage games track. Data-driven: dots and
+   pages are recomputed from the rendered cards, so adding a game to the
+   GAMES array above is still the only change a new game needs. */
+function initCarousel(){
+  var track = document.getElementById("games-grid");
+  var wrap = document.getElementById("games-carousel");
+  var dotsEl = document.getElementById("games-dots");
+  var prev = document.getElementById("games-prev");
+  var next = document.getElementById("games-next");
+  if (!track || !wrap || !dotsEl || !prev || !next) return;
+
+  function pageCount(){
+    var w = track.clientWidth;
+    if (!w) return 1;
+    return Math.max(1, Math.ceil(track.scrollWidth / w));
+  }
+  function currentPage(){
+    var w = track.clientWidth || 1;
+    return Math.min(pageCount() - 1, Math.max(0, Math.round(track.scrollLeft / w)));
+  }
+  function scrollToPage(i){
+    var w = track.clientWidth;
+    track.scrollTo({ left: i * w, behavior: "smooth" });
+  }
+  function buildDots(){
+    var pages = pageCount();
+    dotsEl.innerHTML = "";
+    for (var i = 0; i < pages; i++){
+      (function(page){
+        var dot = document.createElement("button");
+        dot.type = "button";
+        dot.setAttribute("aria-label", "Go to games page " + (page + 1));
+        dot.addEventListener("click", function(){ scrollToPage(page); });
+        dotsEl.appendChild(dot);
+      })(i);
+    }
+    dotsEl.classList.toggle("hidden", pages <= 1);
+    wrap.classList.toggle("single-page", pages <= 1);
+  }
+  function updateState(){
+    var pages = pageCount();
+    var page = currentPage();
+    var dots = dotsEl.children;
+    for (var i = 0; i < dots.length; i++){
+      dots[i].classList.toggle("active", i === page);
+    }
+    prev.disabled = track.scrollLeft <= 4;
+    next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4 || pages <= 1;
+  }
+  prev.addEventListener("click", function(){ scrollToPage(currentPage() - 1); });
+  next.addEventListener("click", function(){ scrollToPage(currentPage() + 1); });
+  track.addEventListener("scroll", updateState, { passive: true });
+  window.addEventListener("resize", function(){ buildDots(); updateState(); });
+  buildDots();
+  updateState();
+}
