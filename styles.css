@@ -22,6 +22,11 @@ nav a:hover{color:var(--text)}
 .btn{display:inline-block;background:linear-gradient(135deg,var(--neon),#b3125f);color:#fff;text-decoration:none;padding:13px 30px;border-radius:999px;font-weight:700;box-shadow:0 4px 24px rgba(255,45,120,.4)}
 .btn:hover{filter:brightness(1.1)}
 .btn.ghost{background:transparent;border:1px solid var(--line);box-shadow:none;color:var(--text);margin-left:10px}
+/* Stacked buttons in buybox/cta-band must never share a line box: inline-block
+   buttons wrapped to a second line with no margin, so their glow and edges
+   merged into an overlap on desktop. Block layout gives them real gaps. */
+.buybox .btn{display:block;text-align:center;margin:12px 0}
+.cta-band .btn{display:block;text-align:center;margin:12px auto;max-width:420px}
 section.block{padding:40px 0}
 h2.sec{font-size:1.6rem;margin:0 0 8px}
 p.lead{color:var(--muted);margin:0 0 24px}
